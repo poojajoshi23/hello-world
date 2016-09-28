@@ -25,21 +25,21 @@ for (i in mycars)
 var url ='http://localhost:8080/SpringRestExample/rest/emps';
 
 
-   $('#json').click(function(){ 
+   $('#json').click(function(){
         alert('json');
          $.getJSON("http://localhost:8080/SpringRestExample/rest/emps",
          function(data) {
-            alert(data);         
-          });   
+            alert(data);
+          });
     });
 
-    $('#ajax').click(function(){ 
+    $('#ajax').click(function(){
         alert('ajax');
-         $.ajax({ 
+         $.ajax({
              type: "GET",
              dataType: "json",
              url: "http://localhost:8080/SpringRestExample/rest/emps",
-             success: function(data){        
+             success: function(data){
             	 console.log("SUCCESS: ", data);
             	 for (i in data)
             	 {
@@ -47,8 +47,9 @@ var url ='http://localhost:8080/SpringRestExample/rest/emps';
             	 }
              }
   			  } );
+
          });
-    
+
 
 
 </script>
