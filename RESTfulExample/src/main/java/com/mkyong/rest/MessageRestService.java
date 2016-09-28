@@ -15,6 +15,8 @@ public class MessageRestService {
 
 		String result = "Restful example : " + msg;
 
+		System.out.println("commit after stash");
+
 		return Response.status(200).entity(result).build();
 
 	}
